@@ -1,0 +1,14 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Compiled files
+bin/
+target/
+
+# macOS
+.DS_Store
+
+# Database credentials
+db.properties
