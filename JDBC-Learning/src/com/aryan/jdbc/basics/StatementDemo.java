@@ -1,17 +1,18 @@
 package com.aryan.jdbc.basics;
 
 import java.sql.*;
+import java.util.Scanner;
 
 public class StatementDemo {
 
 	public static void main(String[] args) {
-		String url = "jdbc:mysql://localhost:3307/jdbc_learning";
+		String url = "jdbc:mysql://localhost:3307/springboot";
 		String username = "admin";
 		String password = "secretpassword";
 		
 		Connection con = null;
 		Statement stmt = null;
-		ResultSet resultSet = null;
+		Scanner scanner = null;
 		
 		try {
 			con = DriverManager.getConnection(url, username, password);
@@ -19,26 +20,39 @@ public class StatementDemo {
 			
 			stmt = con.createStatement();
 			
-			String sqlSelectQuery = "select * from employee";
+			scanner = new Scanner(System.in);
 			
-			resultSet = stmt.executeQuery(sqlSelectQuery);
+			System.out.println("Enter the Id of an Employee :: ");
+			int id = scanner.nextInt();
+
+			System.out.println("Enter the Name of an Employee :: ");
+			String name = scanner.next();
+
+			System.out.println("Enter the Salary of an Employee :: ");
+			double salary = scanner.nextDouble();
+
+			System.out.println("Enter the Address of an Employee :: ");
+			String address = scanner.next();
+
+			String nonSelectQuery = String.format("insert into employee values(%d,'%s',%f,'%s')", 
+							id, name, salary,address);
+
+			// 3. Send and execute the query at DBside
+			int noOfRowsAffected = stmt.executeUpdate(nonSelectQuery);
 			
-			while(resultSet.next()){
-				int id = resultSet.getInt("eid");
-				String name = resultSet.getString(2);
-				Double salary = resultSet.getDouble(3);
-				String address = resultSet.getString(4);
-				
-				System.out.println(id + "\t" + name + "\t" + salary + "\t" + address);
+			if(noOfRowsAffected == 0) {
+				System.out.println("No row Affected");
+			} else {
+				System.out.println("Number of row Affected :-" + noOfRowsAffected);
 			}
 			
-		} catch(SQLException e) {
+		} catch(SQLException e) { 
 			e.printStackTrace();
 		} finally {
 			try {
-				resultSet.close();
 				stmt.close();
 				con.close();
+				scanner.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
