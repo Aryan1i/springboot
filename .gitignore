@@ -3,7 +3,8 @@
 .project
 .settings/
 
-# Compiled files
+# Compiled Java
+*.class
 bin/
 target/
 
@@ -12,3 +13,6 @@ target/
 
 # Database credentials
 db.properties
+
+# Eclipse workspace
+.metadata/
