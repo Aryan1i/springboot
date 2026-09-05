@@ -30,3 +30,12 @@ public class TryWithResources {
 	}
 
 }
+
+
+/* OUTPUT
+
+Enter the employee id which you want to delete
+1
+No of row Affected :- 1
+
+*/

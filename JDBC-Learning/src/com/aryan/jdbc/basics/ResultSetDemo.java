@@ -51,3 +51,14 @@ public class ResultSetDemo {
 	}
 
 }
+
+/* OUTPUT
+
+Connection established :: com.mysql.cj.jdbc.ConnectionImpl@445b295b
+7	dhoni	356000.0	CSK
+9	lara	456789.0	Barbodas
+10	sachin	456000.0	MI
+18	kohli	426000.0	RCB
+45	rohit	386000.0	GT
+
+*/

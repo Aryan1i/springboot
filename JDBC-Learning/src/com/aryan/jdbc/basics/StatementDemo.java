@@ -61,3 +61,18 @@ public class StatementDemo {
 	}
 
 }
+
+/* OUTPUT
+
+Connection established :: com.mysql.cj.jdbc.ConnectionImpl@445b295b
+Enter the Id of an Employee :: 
+1
+Enter the Name of an Employee :: 
+TEST
+Enter the Salary of an Employee :: 
+100000
+Enter the Address of an Employee :: 
+MUMBAI
+Number of row Affected :-1
+
+*/

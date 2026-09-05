@@ -29,3 +29,12 @@ public class PropertiesDemo {
 	}
 
 }
+
+
+/* OUTPUT
+
+url :- jdbc:mysql://localhost:3307/springboot
+username :- admin
+password :- secretpassword
+
+*/

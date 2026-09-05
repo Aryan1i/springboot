@@ -17,3 +17,10 @@ public class ConnectionDemo {
 		}
 	}
 }
+
+
+/* OUTPUT
+
+Connection Established Successfuly com.mysql.cj.jdbc.ConnectionImpl@445b295b
+
+*/
