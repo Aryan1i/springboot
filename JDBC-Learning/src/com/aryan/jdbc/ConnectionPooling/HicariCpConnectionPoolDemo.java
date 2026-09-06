@@ -42,6 +42,8 @@ public class HicariCpConnectionPoolDemo {
 		connection.close();
 		System.out.println("Sending back Connection object to Connection Pool");
 		
+		datasource.close();
+		
 	}
 
 }
