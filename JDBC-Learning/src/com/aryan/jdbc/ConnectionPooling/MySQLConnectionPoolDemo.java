@@ -47,3 +47,12 @@ public class MySQLConnectionPoolDemo {
 	}
 
 }
+
+
+/* OUTPUT
+
+Got connection object From connection pool
+
+Sending back Connection object to Connection Pool
+
+*/
