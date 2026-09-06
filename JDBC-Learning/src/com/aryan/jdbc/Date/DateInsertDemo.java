@@ -1,4 +1,4 @@
-package com.aryan.jdbc.date;
+package com.aryan.jdbc.Date;
 
 import java.util.*;
 import java.util.Date;

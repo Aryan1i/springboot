@@ -1,4 +1,4 @@
-package com.aryan.jdbc.preparedstatement;
+package com.aryan.jdbc.PreparedStatement;
 
 import java.sql.*;
 import java.util.*;

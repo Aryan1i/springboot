@@ -1,4 +1,4 @@
-package com.aryan.jdbc.date;
+package com.aryan.jdbc.Date;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -63,3 +63,10 @@ public class DateFetchDemo {
 	}
 
 }
+
+
+/* OUTPUT
+
+1	sachin	11-08-2026	11-08-2026	11-08-2026
+
+*/

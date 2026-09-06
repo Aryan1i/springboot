@@ -1,4 +1,4 @@
-package com.aryan.jdbc.properties;
+package com.aryan.jdbc.Properties;
 
 import java.io.InputStream;
 import java.util.*;

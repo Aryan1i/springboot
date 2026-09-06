@@ -1,4 +1,4 @@
-package com.aryan.jdbc.basics;
+package com.aryan.jdbc.Basics;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
