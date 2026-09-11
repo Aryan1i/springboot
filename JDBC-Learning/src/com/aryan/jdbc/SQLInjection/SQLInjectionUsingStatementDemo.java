@@ -16,7 +16,7 @@ public class SQLInjectionUsingStatementDemo {
 		try {
 			properties.load(is);
 			
-			url = properties.getProperty("url");
+			url = properties.getProperty("jdbcUrl");
 			username = properties.getProperty("username");
 			password = properties.getProperty("password");
 		} catch (IOException e) {
