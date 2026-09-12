@@ -1,27 +1,39 @@
 package com.aryan.jdbc.model;
 
 public class Employee {
-	private Integer eid;
+	private int eid;
 	private String ename;
 	private Double esal;
 	private String eaddr;
 
 	public Employee(String ename,Double esal,String eaddr){
 		this.ename = ename;
+		this.esal = esal; 
+		this.eaddr = eaddr;
+	}
+	
+	public Employee(int eid, String ename,Double esal,String eaddr){
+		this.eid = eid;
+		this.ename = ename;
 		this.esal = esal;
 		this.eaddr = eaddr;
 	}
 	
 	
-	Employee(){
+	@Override
+	public String toString() {
+		return "Employee [eid=" + eid + ", ename=" + ename + ", esal=" + esal + ", eaddr=" + eaddr + "]";
+	}
+
+	public Employee(){
 		
 	}
 
-	public Integer getEid() {
+	public int getEid() {
 		return eid;
 	}
 
-	public void setEid(Integer eid) {
+	public void setEid(int eid) {
 		this.eid = eid;
 	}
 

@@ -12,17 +12,19 @@ public class DBUtil {
 		
 	}
 	
-	public static Connection connection = null;
+	private static Connection connection = null;
 	
-
-	public static Connection getConnection() throws SQLException {
+	static {
 		HikariConfig config = new HikariConfig("db.properties");
         HikariDataSource datasource = new HikariDataSource(config);
-
-        if (connection == null) {
-            connection = datasource.getConnection();
-        }
-
-        return connection;
+        try {
+			connection = datasource.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static Connection getConnection(){
+        return connection; 
 	}
 }
