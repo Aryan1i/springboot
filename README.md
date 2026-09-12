@@ -1,102 +1,74 @@
-# JDBC Learning ☕️
+# Java Backend Learning
 
-This folder contains my code and practice examples while learning **JDBC (Java Database Connectivity)**.
+This repository contains my **Java Backend Development learning journey**.
 
-The goal is to understand how Java applications communicate with a relational database and how different JDBC APIs can be used to perform database operations.
+All the code, practice programs, and projects that I build while learning **Spring and Spring Boot** will be organized and maintained in this repository.
 
-## Topics Covered
-
-### 1. JDBC Basics
-- Establishing a database connection using `Connection`
-- Working with `Statement`
-- Working with `ResultSet`
-- Try-with-resources for JDBC resources
-
-### 2. PreparedStatement
-- `PreparedStatement`
-- SELECT queries
-- INSERT, UPDATE and DELETE queries
-- `executeQuery()`
-- `executeUpdate()`
-- `execute()`
-
-### 3. Properties
-- Using `.properties` files
-- Reading database configuration using `Properties`
-- Separating database configuration from Java code
-
-### 4. SQL Injection
-- Understanding SQL Injection
-- SQL Injection using `Statement`
-- Preventing SQL Injection using `PreparedStatement`
-
-### 5. Batch Updates
-- Batch processing using `Statement`
-- `addBatch()`
-- `executeBatch()`
-- Batch updates with transactions
-
-### 6. Transactions
-- Disabling auto-commit using `setAutoCommit(false)`
-- `commit()`
-- `rollback()`
-- Handling transaction failures using `try-catch`
-
-### 7. BLOB
-- Storing images/files in the database using BLOB
-- Fetching BLOB data
-- Working with `InputStream`
-- Writing fetched image data to files
-- Reading BLOB data using different approaches
-
-### 8. CLOB
-- Storing large text using CLOB
-- Fetching CLOB data
-- Working with character streams
-
-### 9. Date Handling
-- Inserting dates into the database
-- Fetching dates
-- Converting `String` to `Date`
-
-### 10. Connection Pooling
-- Understanding database connection pooling
-- MySQL connection pooling
-- HikariCP
-- Using HikariCP configuration
-- Working with pooled database connections
+I will keep updating this repository as I learn new concepts and build new projects.
 
 ---
 
-## Project Structure
+## 📚 What I Have Covered So Far
+
+### JDBC
+
+I have completed the following JDBC concepts and practice:
+
+* JDBC Basics
+* PreparedStatement
+* Properties File
+* SQL Injection
+* Batch Update
+* Transactions
+* BLOB
+* CLOB
+* Date Handling
+* Connection Pooling using HikariCP
+
+### JDBC Project
+
+I have also built a **JDBC-based Employee CRUD Project** using the concepts learned so far.
+
+The project includes:
+
+* Create Employee
+* Read Employee
+* Update Employee
+* Delete Employee
+* DAO Layer
+* Service Layer
+* Model Layer
+* Database Utility
+* MySQL Database
+* HikariCP Connection Pooling
+
+---
+
+## 📁 Repository Structure
 
 ```text
-JDBC-Learning
+springboot/
 │
-└── src
-    └── com
-        └── aryan
-            └── jdbc
-                │
-                ├── Basics
-                ├── PreparedStatement
-                ├── Properties
-                ├── SQLInjection
-                ├── BatchUpdate
-                ├── Blob
-                ├── Clob
-                ├── Date
-                └── ConnectionPooling
-## Purpose
-
-This is a **learning repository**, so the code consists of small, focused examples for understanding individual JDBC concepts.
-
-As I continue learning, I will keep adding new concepts and implementations to this repository.
+├── JDBC-Learning/
+│   └── Topic-wise JDBC learning and practice code
+│
+├── JDBC-CRUD-Project/
+│   └── JDBC Employee CRUD application
+│
+├── .gitignore
+└── README.md
+```
 
 ---
 
-## Current Progress
+## 🎯 Purpose
 
-**JDBC — In Progress 🚧**
+The purpose of this repository is to maintain my learning and progress throughout my **Java Backend Development journey**.
 
-More topics and implementations will be added as I continue my learning journey.
+I will continuously organize my learning code and projects here as I progress from **JDBC to Spring and Spring Boot**.
+
+---
+
+## 👨‍💻 Author
+
+**Aryan Gupta**
