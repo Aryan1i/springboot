@@ -25,35 +25,35 @@ public class HibernateInsert {
 		dept1.setDname("IT");
 		
 		Department dept2 = new Department();
-		dept1.setDid(101);
-		dept1.setDname("AI");
+		dept2.setDid(101);
+		dept2.setDname("AI");
 		
 		Employee emp1 = new Employee();
 		emp1.setEid(10);
 		emp1.setEname("sachin");
 		emp1.setEaddress("MI");
 		
-		emp1.setDepatment(dept1);
 		
 		Employee emp2 = new Employee();
 		emp2.setEid(19);
 		emp2.setEname("dravid");
 		emp2.setEaddress("RCB");
 		
-		emp2.setDepatment(dept1);
 		
 		Employee emp3 = new Employee();
 		emp3.setEid(7);
 		emp3.setEname("dhoni");
 		emp3.setEaddress("CSK");
 		
-		emp3.setDepatment(dept2);
 		
-		session.persist(emp1);
-		session.persist(emp2);
-		session.persist(emp3);
+		dept1.addEmployee(emp1);
+		dept1.addEmployee(emp2);
+		dept2.addEmployee(emp3);
+		
+		
+		session.persist(dept1);
+        session.persist(dept2);
 
-		
 		
 		transaction.commit();
 		session.close();
@@ -62,11 +62,11 @@ public class HibernateInsert {
 
 }
 
+
 //OUTPUT
 
 /*
- * 
- * Hibernate: 
+ Hibernate: 
     alter table empTab 
        drop 
        foreign key FKsbpqjbjy6xw2jqq3t1rlgr58m
@@ -128,4 +128,5 @@ Hibernate:
         (dnoFK, empAddress, empName, empId) 
     values
         (?, ?, ?, ?)
+
 */

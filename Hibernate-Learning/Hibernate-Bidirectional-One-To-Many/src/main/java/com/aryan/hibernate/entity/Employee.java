@@ -15,7 +15,7 @@ public class Employee {
 	
 	@Id
 	@Column(name = "empId")
-	private Integer eid;
+	private int eid;
 	
 	@Column(name = "empName")
 	private String ename;
@@ -25,7 +25,7 @@ public class Employee {
 	
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
 	@JoinColumn(name = "dnoFK")
-	private Department depatment;
+	private Department department;
 	
 	public Employee() {
 		
@@ -57,16 +57,16 @@ public class Employee {
 	
 	
 	public Department getDepatment() {
-		return depatment;
+		return department;
 	}
 
-	public void setDepatment(Department depatment) {
-		this.depatment = depatment;
+	public void setDepatment(Department department) {
+		this.department = department;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [eid=" + eid + ", ename=" + ename + ", eaddress=" + eaddress + ", depatment=" + depatment
+		return "Employee [eid=" + eid + ", ename=" + ename + ", eaddress=" + eaddress + ", depatment=" + department
 				+ "]";
 	}
 	
