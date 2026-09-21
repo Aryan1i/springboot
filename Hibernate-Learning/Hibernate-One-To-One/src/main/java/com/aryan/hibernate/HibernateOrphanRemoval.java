@@ -27,3 +27,44 @@ public class HibernateOrphanRemoval {
 	}
 
 }
+
+//output
+
+/*
+Hibernate: 
+select
+    p1_0.personId,
+    p1_0.pidFK,
+    p1_0.perName 
+from
+    Person p1_0 
+where
+    p1_0.personId=?
+Hibernate: 
+select
+    p1_0.pid,
+    p2_0.personId,
+    p2_0.perName,
+    p1_0.pnum 
+from
+    Passport p1_0 
+left join
+    Person p2_0 
+        on p1_0.pid=p2_0.pidFK 
+where
+    p1_0.pid=?
+Hibernate: 
+update
+    Person 
+set
+    pidFK=?,
+    perName=? 
+where
+    personId=?
+Hibernate: 
+delete 
+from
+    Passport 
+where
+    pid=?
+*/
