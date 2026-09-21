@@ -16,8 +16,9 @@ public class HibernateInsert {
 		Session session = factory.openSession();
 	
 		Transaction transaction = session.beginTransaction();
-
-		session.persist(new Employee("Aryan", "BLR", 200000.0));
+		
+		Employee emp = new Employee("Aryan", "BLR", 200000.0);
+		session.persist(emp);
 		
 		transaction.commit();
 	}
