@@ -46,7 +46,7 @@ public class ReadingMultipleColumns {
 //OUTPUT
 
 /*
- * Hibernate: 
+ * Hibernate:
     select
         e1_0.empName,
         e1_0.empAddress 
