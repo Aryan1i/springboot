@@ -44,7 +44,7 @@ public class Employee {
         this.ename = ename;
     }
 
-    public int getEsal() {
+    public double getEsal() {
         return esal;
     }
 
