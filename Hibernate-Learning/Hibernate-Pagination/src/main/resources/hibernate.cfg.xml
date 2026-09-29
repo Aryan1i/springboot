@@ -31,7 +31,7 @@
 
 		<!-- Automatically create/update tables -->
 		<property name="hibernate.hbm2ddl.auto">
-			update
+			create
 		</property>
 
 	</session-factory>
