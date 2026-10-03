@@ -31,7 +31,7 @@ public class ResultSetDemo {
 				int id = resultSet.getInt("eid");
 				String name = resultSet.getString(2);
 				Double salary = resultSet.getDouble(3);
-				String address = resultSet.getString(4);
+				String address = resultSet.getString(4); 
 				
 				System.out.println(id + "\t" + name + "\t" + salary + "\t" + address);
 			}
