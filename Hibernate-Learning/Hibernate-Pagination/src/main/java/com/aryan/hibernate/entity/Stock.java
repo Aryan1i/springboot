@@ -21,7 +21,7 @@ public class Stock {
 	private String exchange;
 	
 	@Version
-	private Integer count; 
+	private Integer count;
 	
 	@CreationTimestamp
 	private LocalDateTime openingTime; 
