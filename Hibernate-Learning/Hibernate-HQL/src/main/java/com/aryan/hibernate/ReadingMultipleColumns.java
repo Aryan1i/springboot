@@ -36,7 +36,6 @@ public class ReadingMultipleColumns {
 			System.out.println();
 		}
 		
-		
 		session.close();
 		factory.close();
 	}
