@@ -16,7 +16,6 @@ public class StoredProcedureGetEmployeeDetailsById {
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-unit");
 		EntityManager em = factory.createEntityManager();
-		EntityTransaction transaction = em.getTransaction();
 		
 		String storedProcedureName = "getEmployeeDetailsById";
 		
@@ -37,3 +36,10 @@ public class StoredProcedureGetEmployeeDetailsById {
 	}
 
 }
+
+
+//output
+
+/*Hibernate: 
+{call getEmployeeDetailsById(?)}
+Employee [eid=1, ename=sachin, esal=50000.0, eaddress=MI]*/

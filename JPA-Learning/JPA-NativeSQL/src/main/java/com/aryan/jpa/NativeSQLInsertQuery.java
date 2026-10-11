@@ -34,5 +34,4 @@ public class NativeSQLInsertQuery {
 		em.close();
 		factory.close();
 	}
-
 }

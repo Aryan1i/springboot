@@ -12,7 +12,7 @@ public class StoredProcedureGetNameById {
 
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-unit");
-		
+
 		EntityManager em = factory.createEntityManager();
 		
 		String storedProcedureName = "getEmployeeNameById";
@@ -34,3 +34,12 @@ public class StoredProcedureGetNameById {
 	}
 
 }
+
+
+//OUTPUT
+
+/*
+	Hibernate: 
+	{call getEmployeeNameById(?, ?)}
+	sachin
+*/
