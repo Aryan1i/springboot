@@ -14,6 +14,7 @@ public class TestApp {
 		
 		EntityManager manager = factory.createEntityManager();
 		
+		
 		Employee emp = manager.find(Employee.class, 1);
 		System.out.println(emp);
 		
